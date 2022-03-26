@@ -51,7 +51,7 @@ const Prediction = () => {
                   <Form.Control placeholder="WBC Count" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} />
                 </Col>
               </Row>
-              <Row className="mb-3">
+              {/* <Row className="mb-3">
                 <Col>
                   <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
                     <option>Tachypnea</option>
@@ -66,7 +66,116 @@ const Prediction = () => {
                     <option value="2">Not Present</option>
                   </Form.Select>
                 </Col>
+              </Row> */}
+              <Row className="mb-3">
+                <Col>
+                  <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
+                    <option>Maternal Genes</option>
+                    <option value="1">Present</option>
+                    <option value="2">Not Present</option>
+                  </Form.Select>
+                </Col>
+                <Col>
+                  <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
+                    <option>Paternal Genes</option>
+                    <option value="1">Present</option>
+                    <option value="2">Not Present</option>
+                  </Form.Select>
+                </Col>
               </Row>
+              <Row className="mb-3">
+                <Col>
+                  <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
+                    <option>Respiratory Rate(Breaths/min)</option>
+                    <option value="1">Tachypnea</option>
+                    <option value="2">Normal(30-60)</option>
+                  </Form.Select>
+                </Col>
+                <Col>
+                  <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
+                    <option>Heart Rate(Rates/min)</option>
+                    <option value="1">Tachycardia 	</option>
+                    <option value="2">Normal</option>
+                  </Form.Select>
+                </Col>
+              </Row>
+              <Row className="mb-3">
+                <Col>
+                  <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
+                    <option>Birth Asphyxia</option>
+                    <option value="1">Present</option>
+                    <option value="2">Not Present</option>
+                  </Form.Select>
+                </Col>
+                <Col>
+                  <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
+                    <option>Folic Acid Details</option>
+                    <option value="1">Present</option>
+                    <option value="2">Not Present</option>
+                  </Form.Select>
+                </Col>
+              </Row>
+              <Row className="mb-3">
+                <Col>
+                  <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
+                    <option>H/O Serious Maternal Illness</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                  </Form.Select>
+                </Col>
+                <Col>
+                  <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
+                    <option>H/O Radiation Exposure(X-Ray)</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                  </Form.Select>
+                </Col>
+              </Row>
+              <Row className="mb-3">
+                <Col>
+                  <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
+                    <option>H/O Substance Abuse</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                    <option value="2">No Records</option>
+                  </Form.Select>
+                </Col>
+                <Col>
+                  <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
+                    <option>Assisted Conception IVF/ART</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                  </Form.Select>
+                </Col>
+              </Row>
+              <Row className="mb-3">
+                <Col>
+                  <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
+                    <option>H/O Anamalies in previous pregnancies</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                  </Form.Select>
+                </Col>
+                <Col>
+                  <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
+                    <option>Birth Defects</option>
+                    <option value="1">Multiple</option>
+                    <option value="2">Singular</option>
+                  </Form.Select>
+                </Col>
+              </Row>
+              <Row className="mb-3">
+                <Col>
+                  <Form.Select aria-label="Default select example" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }} >
+                    <option>Blood Test Result</option>
+                    <option value="1">Abnormal</option>
+                    <option value="2">Inconclusive</option>
+                    <option value="1">Normal</option>
+                    <option value="2">Slightly Abnormal</option>
+                  </Form.Select>
+                </Col>
+              </Row>
+
             </Form>
           </Container>
         </div>

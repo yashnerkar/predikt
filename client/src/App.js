@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import History from "./pages/History";
 import Prediction from "./pages/Prediction";
+import Register from "./pages/Register";
 import "normalize.css";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/History" element={<History />} />
         <Route path="/Diagnose" element={<Prediction />} />
+        <Route path="/Register" element={<Register />} />
       </Routes>
     </Router>
   );

@@ -13,7 +13,6 @@ const Home = () => {
       }}>
         <HomePageNavbar />
         <div className="d-flex m-5 justify-content-center">
-
           <Row>
             <Col>
               <img src="images/homePageLogo.png" alt="logo" height="450rem" />
@@ -31,7 +30,6 @@ const Home = () => {
                 </Form.Group>
                 <div className="mt-1">
                   <Link to="/Dashboard">
-
                     <Button
                       type="submit"
                       // fullWidth

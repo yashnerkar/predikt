@@ -38,8 +38,7 @@ function HomePageNavbar() {
                     <p className="mt-3" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }}>Don't have an Account? </p>
                     &nbsp; &nbsp;
                     <div className="mt-1">
-                        <Link to="/Register">
-
+                        <Link to="/Register" style={{textDecoration: "none"}}>
                             <Button
                                 type="submit"
                                 // fullWidth

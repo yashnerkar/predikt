@@ -6,32 +6,18 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(name, age, gender, lastVisit, report) {
+  return { name, age, gender, lastVisit, report };
 }
 
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Samantha Desai", "8 months", "Female", "25-03-2022"),
+  createData("Rashmi Khanna", "5 months", "Female", "21-02-2022"),
+  createData("Amisha Patel", "9 months", "Female", "15-02-2022"),
+  createData("Yash Gupta", "3 months", "Male", "10-01-2022"),
 ];
 
 export default function BasicTable() {
@@ -42,7 +28,7 @@ export default function BasicTable() {
         width: "90vw",
         overflowY: "scroll",
         msOverflowStyle: "none",
-        scrollbarWidth: "none" ,
+        scrollbarWidth: "none",
         overflowX: "hidden",
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25)",
         borderRadius: "30px"
@@ -53,16 +39,16 @@ export default function BasicTable() {
           <TableHead>
             <TableRow>
               <TableCell className="fw-bold">Patient's Name</TableCell>
-              <TableCell className="fw-bold" align="right">
+              <TableCell className="fw-bold" align="center">
                 Age
               </TableCell>
-              <TableCell className="fw-bold" align="right">
+              <TableCell className="fw-bold" align="center">
                 Gender
               </TableCell>
-              <TableCell className="fw-bold" align="right">
+              <TableCell className="fw-bold" align="center">
                 Last Visit
               </TableCell>
-              <TableCell className="fw-bold" align="right">
+              <TableCell className="fw-bold" align="center">
                 Report
               </TableCell>
             </TableRow>
@@ -76,10 +62,32 @@ export default function BasicTable() {
                 <TableCell component="th" scope="row">
                   {row.name}
                 </TableCell>
-                <TableCell align="right">{row.calories}</TableCell>
-                <TableCell align="right">{row.fat}</TableCell>
-                <TableCell align="right">{row.carbs}</TableCell>
-                <TableCell align="right">{row.protein}</TableCell>
+                <TableCell align="center">{row.age}</TableCell>
+                <TableCell align="center">{row.gender}</TableCell>
+                <TableCell align="center">{row.lastVisit}</TableCell>
+                <TableCell align="center"><div className="mt-1">
+                  <a href="files/report.pdf" style={{textDecoration: "none"}} download>
+                    <Button
+                      type="submit"
+                      // fullWidth
+                      // style={{bgcolor}}
+                      variant="contained"
+                      sx={{ mt: 3, mb: 2 }}
+                      style={{
+                        borderRadius: "50px",
+                        paddingLeft: "0.5rem",
+                        paddingRight: "0.5rem",
+                        paddingTop: "0.5rem",
+                        paddingBottom: "0.5rem",
+                        minWidth: "100px",
+                        minHeight: "40px",
+                        backgroundColor: "#407BFF",
+                      }}
+                    >
+                      Download
+                    </Button>
+                  </a>
+                </div></TableCell>
               </TableRow>
             ))}
           </TableBody>

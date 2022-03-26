@@ -237,8 +237,7 @@ const Dashboard = () => {
         </Row>
       </div>
       <div className="mt-1">
-        <Link to="/Diagnose">
-
+        <Link to="/Diagnose" style={{textDecoration: "none"}}>
           <Button
             type="submit"
             // fullWidth
