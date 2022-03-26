@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Form, FormControl, Button } from "react-bootstrap";
 import HomePageNavbar from "../components/navbar/HomepageNavbar";
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -29,25 +30,28 @@ const Home = () => {
                   <Form.Control type="password" placeholder="Enter your Password" style={{ fontFamily: "Poppins, sans-serif", fontSize: "0.8rem" }} />
                 </Form.Group>
                 <div className="mt-1">
-                  <Button
-                    type="submit"
-                    // fullWidth
-                    // style={{bgcolor}}
-                    variant="contained"
-                    style={{
-                      borderRadius: "50px",
-                      maxWidth: "100px",
-                      maxHeight: "40px",
-                      minWidth: "100px",
-                      minHeight: "40px",
-                      backgroundColor: "#407BFF",
-                      fontFamily: "Poppins, sans-serif",
-                      fontSize: "0.9rem",
-                      color: "white"
-                    }}
-                  >
-                    Login
-                  </Button>
+                  <Link to="/Dashboard">
+
+                    <Button
+                      type="submit"
+                      // fullWidth
+                      // style={{bgcolor}}
+                      variant="contained"
+                      style={{
+                        borderRadius: "50px",
+                        maxWidth: "100px",
+                        maxHeight: "40px",
+                        minWidth: "100px",
+                        minHeight: "40px",
+                        backgroundColor: "#407BFF",
+                        fontFamily: "Poppins, sans-serif",
+                        fontSize: "0.9rem",
+                        color: "white"
+                      }}
+                    >
+                      Login
+                    </Button>
+                  </Link>
                 </div>
               </Form>
             </Col>
@@ -95,22 +99,24 @@ const Home = () => {
             </div>
           </Col>
         </Row>
-        <Button
-          type="submit"
-          // fullWidth
-          // style={{bgcolor}}
-          variant="contained"
-          style={{
-            borderRadius: "50px",
-            backgroundColor: "#407BFF",
-            fontFamily: "Poppins, sans-serif",
-            fontSize: "1rem",
-            color: "white",
-            padding: "0.8rem"
-          }}
-        >
-          Sign Up Now !
-        </Button>
+        <Link to="/Register">
+          <Button
+            type="submit"
+            // fullWidth
+            // style={{bgcolor}}
+            variant="contained"
+            style={{
+              borderRadius: "50px",
+              backgroundColor: "#407BFF",
+              fontFamily: "Poppins, sans-serif",
+              fontSize: "1rem",
+              color: "white",
+              padding: "0.8rem"
+            }}
+          >
+            Sign Up Now !
+          </Button>
+        </Link>
         {/* Footer */}
         <div className="d-flex justify-content-center mt-2 align-items-center mr-0">
           <Col>

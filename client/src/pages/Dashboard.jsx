@@ -1,18 +1,17 @@
 // Dashboard Page 
-import { Translate } from "@mui/icons-material";
-import { textAlign } from "@mui/system";
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import Navbar from "../components/navbar/Navbar";
-import Table from "../components/Table";
 import Button from "@mui/material/Button";
-// import RecommendedJobCard from "./RecommendedJobCard";
-// import Searchbar from "./Searchbar";
+import { Link } from "react-router-dom";
+
 
 const Dashboard = () => {
   return (
-    <div style={{ width: "100vw", textAlign: "center", overflowX: "hidden"
-     ,background: "linear-gradient(90deg, rgba(133, 178, 249, 0.5) 0%, rgba(175, 203, 249, 0) 100%) ",height: "100vh"}}>
+    <div style={{
+      width: "100vw", textAlign: "center", overflowX: "hidden"
+      , background: "linear-gradient(90deg, rgba(133, 178, 249, 0.5) 0%, rgba(175, 203, 249, 0) 100%) ", height: "100vh"
+    }}>
       <Navbar />
       <div className="d-flex justify-content-center text-center">
         <p style={{ fontSize: "3rem", fontWeight: "bolder" }}>Welcome!</p>
@@ -28,7 +27,7 @@ const Dashboard = () => {
               width: "30rem",
               boxShadow:
                 "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-                background: "white"
+              background: "white"
             }}
           >
             <div
@@ -76,7 +75,7 @@ const Dashboard = () => {
                     boxShadow:
                       " 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25)",
                   }}
-                ><h1 style={{margin:"auto"}}>00</h1>
+                ><h1 style={{ margin: "auto" }}>00</h1>
                 </div>
               </div>
             </div>
@@ -149,7 +148,7 @@ const Dashboard = () => {
                     boxShadow:
                       " 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25)",
                   }}
-                ><h1 style={{margin:"auto"}}>00</h1></div>
+                ><h1 style={{ margin: "auto" }}>00</h1></div>
               </div>
             </div>
             <p
@@ -171,7 +170,7 @@ const Dashboard = () => {
               borderRadius: "20px",
               boxShadow:
                 "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-                background: "white"
+              background: "white"
             }}
           >
             {" "}
@@ -221,7 +220,7 @@ const Dashboard = () => {
                     boxShadow:
                       " 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25)",
                   }}
-                ><h1 style={{margin:"auto"}}>00</h1></div>
+                ><h1 style={{ margin: "auto" }}>00</h1></div>
               </div>
             </div>
             <p
@@ -238,27 +237,30 @@ const Dashboard = () => {
         </Row>
       </div>
       <div className="mt-1">
-        <Button
-          type="submit"
-          // fullWidth
-          // style={{bgcolor}}
-          variant="contained"
-          sx={{ mt: 3, mb: 2 }}
-          style={{
-            borderRadius: "50px",
-            paddingLeft: "5rem",
-            paddingRight: "5rem",
-            paddingTop: "0.5rem",
-            paddingBottom: "0.5rem",
-            maxWidth: "100px",
-            maxHeight: "40px",
-            minWidth: "100px",
-            minHeight: "40px",
-            backgroundColor: "#407BFF",
-          }}
-        >
-          Diagnose
-        </Button>
+        <Link to="/Diagnose">
+
+          <Button
+            type="submit"
+            // fullWidth
+            // style={{bgcolor}}
+            variant="contained"
+            sx={{ mt: 3, mb: 2 }}
+            style={{
+              borderRadius: "50px",
+              paddingLeft: "5rem",
+              paddingRight: "5rem",
+              paddingTop: "0.5rem",
+              paddingBottom: "0.5rem",
+              maxWidth: "100px",
+              maxHeight: "40px",
+              minWidth: "100px",
+              minHeight: "40px",
+              backgroundColor: "#407BFF",
+            }}
+          >
+            Diagnose
+          </Button>
+        </Link>
       </div>
       {/* <div className="border border-dark mt-3">
         <p style={{ fontSize: "2rem" }}>Patients History!</p>

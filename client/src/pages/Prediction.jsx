@@ -71,20 +71,22 @@ const Prediction = () => {
           </Container>
         </div>
         <div className="text-center">
-          <Button
-            type="submit"
-            variant="contained"
-            style={{
-              fontFamily: "Poppins, sans-serif",
-              borderRadius: "50px",
-              color: 'white',
-              padding: "0.8rem",
-              backgroundColor: "#407BFF",
-              textAlign: "center",
-            }}
-          >
-            Download Report
-          </Button>
+          <a href="files/report.pdf" download>
+            <Button
+              type="submit"
+              variant="contained"
+              style={{
+                fontFamily: "Poppins, sans-serif",
+                borderRadius: "50px",
+                color: 'white',
+                padding: "0.8rem",
+                backgroundColor: "#407BFF",
+                textAlign: "center",
+              }}
+            >
+              Download Report
+            </Button>
+          </a>
         </div>
         {/* Send Report to Email */}
         <div className="m-5 text-center">
@@ -94,7 +96,7 @@ const Prediction = () => {
               placeholder="Enter Email"
               aria-label="Username"
               aria-describedby="basic-addon1"
-              style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem", maxWidth: "45rem" , padding: "1rem"}}
+              style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem", maxWidth: "45rem", padding: "1rem" }}
             />
             <Button
               type="submit"

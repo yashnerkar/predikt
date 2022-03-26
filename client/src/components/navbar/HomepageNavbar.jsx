@@ -3,7 +3,8 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import { Row, Col } from 'react-bootstrap';
+import {Link } from "react-router-dom";
+
 
 function HomePageNavbar() {
     return (
@@ -37,23 +38,26 @@ function HomePageNavbar() {
                     <p className="mt-3" style={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }}>Don't have an Account? </p>
                     &nbsp; &nbsp;
                     <div className="mt-1">
-                        <Button
-                            type="submit"
-                            // fullWidth
-                            // style={{bgcolor}}
-                            variant="contained"
+                        <Link to="/Register">
 
-                            style={{
-                                borderRadius: "50px",
-                                maxWidth: "100px",
-                                maxHeight: "40px",
-                                minWidth: "100px",
-                                minHeight: "40px",
-                                backgroundColor: "#407BFF",
-                            }}
-                        >
-                            Sign Up
-                        </Button>
+                            <Button
+                                type="submit"
+                                // fullWidth
+                                // style={{bgcolor}}
+                                variant="contained"
+
+                                style={{
+                                    borderRadius: "50px",
+                                    maxWidth: "100px",
+                                    maxHeight: "40px",
+                                    minWidth: "100px",
+                                    minHeight: "40px",
+                                    backgroundColor: "#407BFF",
+                                }}
+                            >
+                                Sign Up
+                            </Button>
+                        </Link>
                     </div>
                 </Box>
             </Toolbar>
